@@ -11,6 +11,13 @@
             box-sizing: border-box;
         }
 
+        @font-face {
+        font-family: 'em-handwriting'; /* Choose a name for your font */
+        src: url("fonts/em-handwriting.woff2") format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        }
+
         body {
             font-family: 'Georgia', serif;
             background: linear-gradient(135deg, #8B6F47 0%, #A0583C 50%, #B85C4A 100%);
@@ -22,6 +29,13 @@
         header {
             padding: 2rem 0 3rem 0;
             text-align: center;
+        }
+
+         header h1 {
+            font-family: 'em-handwriting', Arial, Helvetica, sans-serif;
+            font-size: clamp(2.2rem, 5vw, 3rem); /* responsive font size */
+            letter-spacing: 3px;
+            margin-bottom: 0rem;
         }
 
         .logo-container {
@@ -211,18 +225,18 @@
     <header>
         <div class="logo-container">
             <img src="https://i.imgur.com/98u0lFl.png" alt="Tender Bloom Logo" class="logo">
+            <h1>Tender Bloom</h1>
         </div>
         <nav>
             <a href="index.html">Home</a>
-            <a href="about.html">About Me</a>
-            <a href="offerings.html">Current Offerings</a>
-            <a href="contact.html">Contact</a>
-            <a href="book.html" class="active">Book</a>
+            <a href="tender-bloom-about.html">About Me</a>
+            <a href="tender-bloom-offerings.html">Current Offerings</a>
+            <a href="tender-bloom-contact.html">Contact</a>
+            <a href="tender-bloom-book.html" class="active">Book</a>
         </nav>
     </header>
 
     <main class="page-content">
-        <div class="divider"></div>
         <h1 class="page-title">Book a Session</h1>
         
         <p class="booking-intro">
@@ -233,12 +247,12 @@
 
         <div class="info-note">
             <p><strong>First time booking?</strong></p>
-            <p>If this is your first session with me, please fill out the <a href="contact.html" style="color: #F4D03F; text-decoration: underline;">contact form</a> first. This helps me understand your needs and ensures we schedule a free consultation call before your first paid session.</p>
+            <p>If this is your first session with me, please fill out the <a href="tender-bloom-contact.html" style="color: #F4D03F; text-decoration: underline;">contact form</a> first. This helps me understand your needs and ensures we schedule a free consultation call before your first paid session.</p>
         </div>
 
         <div class="booking-info">
             <p>Sessions are available by phone, video, or in-person and last 50-60 minutes.</p>
-            <p>Please note the cancellation policy: I require 24 hours notice for cancellations or rescheduling. See the <a href="offerings.html" style="color: #F4D03F; text-decoration: underline;">Current Offerings</a> page for full policy details.</p>
+            <p>Please note the cancellation policy: I require 24 hours notice for cancellations or rescheduling. See the <a href="tender-bloom-offerings2.html" style="color: #F4D03F; text-decoration: underline;">Current Offerings</a> page for full policy details.</p>
         </div>
 
         <div class="divider"></div>
@@ -248,11 +262,11 @@
         <div class="footer-content">
             <div class="footer-about">
                 <div class="footer-nav">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About Me</a>
-                    <a href="offerings.html">Current Offerings</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="book.html">Book</a>
+                    <a href="tender-bloom-website.html">Home</a>
+                    <a href="tender-bloom-about.html">About Me</a>
+                    <a href="tender-bloom-offerings2.html">Current Offerings</a>
+                    <a href="tender-bloom-contact.html">Contact</a>
+                    <a href="tender-bloom-book.html">Book</a>
                 </div>
                 
                 <h3>Tender Bloom Care Work</h3>
