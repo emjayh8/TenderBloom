@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Tender Bloom Care Work</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #8B6F47 0%, #A0583C 50%, #B85C4A 100%);
+            color: #F5F1E3;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 2rem 0 3rem 0;
+            text-align: center;
+        }
+
+        .logo-container {
+            margin-bottom: 2rem;
+        }
+
+        .logo {
+            width: 80px;
+            height: auto;
+            filter: brightness(1.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(245, 241, 227, 0.3);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        nav a {
+            color: #F5F1E3;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: #F4D03F;
+        }
+
+        nav a.active {
+            color: #F4D03F;
+        }
+
+        .page-content {
+            max-width: 900px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .page-title {
+            font-size: 3rem;
+            font-weight: normal;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .divider {
+            width: 350px;
+            height: 1px;
+            background-color: rgba(245, 241, 227, 0.3);
+            margin: 3rem auto;
+        }
+
+        .content-section {
+            margin-bottom: 3rem;
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            font-weight: normal;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: #1F4D3A;
+            color: #F5F1E3;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #6FA5B0;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .cta-section {
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding: 3rem 2rem 2rem 2rem;
+            border-top: 1px solid rgba(245, 241, 227, 0.2);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-nav a {
+            color: #F5F1E3;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-nav a:hover {
+            color: #F4D03F;
+        }
+
+        .footer-about h3 {
+            font-size: 1.3rem;
+            font-weight: normal;
+            margin-bottom: 1rem;
+        }
+
+        .footer-about p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .footer-disclaimer h3 {
+            font-size: 1.1rem;
+            font-weight: normal;
+            margin-bottom: 1rem;
+        }
+
+        .footer-disclaimer p {
+            font-size: 0.85rem;
+            line-height: 1.7;
+            opacity: 0.85;
+            margin-bottom: 0.8rem;
+        }
+
+        .copyright {
+            text-align: left;
+            margin-top: 2rem;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 968px) {
+            nav {
+                flex-wrap: wrap;
+                gap: 1.5rem;
+            }
+
+            .page-title {
+                font-size: 2.2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://i.imgur.com/98u0lFl.png" alt="Tender Bloom Logo" class="logo">
+        </div>
+        <nav>
+            <a href="tender-bloom-website.html">Home</a>
+            <a href="tender-bloom-about.html">About Me</a>
+            <a href="tender-bloom-offerings2.html">Current Offerings</a>
+            <a href="tender-bloom-contact.html">Contact</a>
+            <a href="tender-bloom-book.html">Book</a>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <h1 class="page-title">About Me</h1>
+        
+        <div class="content-section">
+            <h2>Who I am</h2>
+            <p>Hi, I'm Clara. I'm a 32-year-old White queer woman with an MSW and a passion for community care and connection. A Southern transplant, I grew up on the Maryland side of the D.C. area, lived five years in Richmond, VA, and have called Atlanta home since 2017. I hold a deep love for the South in all its complicated beauty, and I'm grateful to be rooted here.</p>
+            <p>Years ago a friend asked me what I would do if I didn't have to work for money and the answer that came so readily is that I would be a 'tender.' I find my greatest fulfillment when I'm tending–whether that means caring for people, plants, animals, or places. To me, tending is about truly seeing others, listening to their needs, dreams, and desires, and walking alongside them as those wishes take shape.</p>
+            <p>My work is grounded in principles of anarchy, anti-racism, liberation, abolition, anti-hierarchical care, harm reduction, autonomy, and community as resistance—all while recognizing the contradictions those commitments can hold. Alongside these principles, I strive to honor the complexities of care while recognizing historic harms that come with being a White person living in the South, on stolen Indigenous land.</p>
+            <p>The Tender Bloom care work practice is entrenched in a belief that isolation destroys us, and a desire to foster a community of genuine, nourishing connections. This work is inspired by old growth forests, mycelial networks, and all the ways nature effortlessly models mutual support. I hope to share in life's cycles with you, fulfilling my greatest joy by bearing witness to your joys and sorrows in turn. I believe wholeheartedly that peer support is the future of mental health care, and that building systems of collective care is one way we can resist isolation, exclusion, and disconnection. Tender Bloom is my contribution to that future.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>What I've learned</h2>
+            <p>My path to care work has been shaped both formally and informally.</p>
+            <p><strong>Informally:</strong> I grew up caring for children in my community and organizing spaces for friends and family as a teenager. Over the years, I've been surrounded by a rich network of queer and neurodivergent folks and walking alongside them as they explored and claimed their identities taught me the power of trust, presence, and love. These experiences deepened my commitment to inclusion and acceptance, and to supporting both traditional and nontraditional paths to care—whether that's self-diagnosis, therapy, medication, peer support, or spiritual practice.</p>
+            <p><strong>Formally:</strong> I minored in psychology during my undergraduate years (2012–2015) and returned to school in 2022 to pursue my MSW, which I completed in May 2025. While I'm particularly drawn to developmental psychology, I chose social work because it felt more expansive and aligned with my sociopolitical worldview. During my graduate studies, I gained experience with DFCS and a local Atlanta nonprofit, but I often felt constrained by bureaucratic systems and professional hierarchies. Although I may pursue clinical licensure in the future, for now I've chosen to create Tender Bloom as an alternative to a traditional mental health career—a space for peer-based, community-rooted care that resists the failing infrastructure of insurance-driven therapy.</p>
+            <p><strong>In Between:</strong> I've been in and out of therapy since I was a pre-teen, and in consistent therapeutic care since 2021. I have lived experience with DBT and IFS therapy and these modalities may inform my work, though I am not a trained practitioner in either. I live with C-PTSD and clinical depression, which I believe are part of the broader web of my own neurodivergence—particularly as C-PTSD overlaps with traits often associated with autism and borderline personality disorder. These diagnoses inform the way I show up with empathy, patience, and understanding in my work. In addition to clinical experiences, I also hold space for spiritual and intuitive practices like tarot and astrology. While not central to my work, I am happy to welcome these bodies of wisdom into our practice together if they feel appropriate.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="cta-section">
+            <a href="tender-bloom-offerings2.html" class="btn">View Current Offerings</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-nav">
+                    <a href="tender-bloom-website.html">Home</a>
+                    <a href="tender-bloom-about.html">About Me</a>
+                    <a href="tender-bloom-offerings2.html">Current Offerings</a>
+                    <a href="tender-bloom-contact.html">Contact</a>
+                    <a href="tender-bloom-book.html">Book</a>
+                </div>
+                
+                <h3>Tender Bloom Care Work</h3>
+                <p>Tender Bloom Care Work provides peer support care sessions by phone, video, or in-person, offering a compassionate, collaborative space for emotional processing. Sessions are flexible, guided by client needs, and offered on a sliding scale.</p>
+            </div>
+            
+            <div class="footer-disclaimer">
+                <h3>Disclaimer</h3>
+                <p>I am providing lived experience peer support care work. I am not a therapist or licensed clinician. While the work we do together may resemble therapy or have a beneficial impact, it is not the same as care provided by a licensed professional counselor.</p>
+                <p>I am not giving out medical advice, diagnosing conditions, or treating diseases and/or illnesses. You are the ultimate authority on your physical, mental, and spiritual needs.</p>
+            </div>
+        </div>
+        
+        <div class="copyright">© 2025</div>
+    </footer>
+</body>
+</html>2
