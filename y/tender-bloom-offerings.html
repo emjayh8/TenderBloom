@@ -266,16 +266,17 @@
 
         .footer-nav {
             display: flex;
-            gap: 2rem;
+            justify-content: center;
+            gap: clamp(1.7rem, 2vw, 2rem); /* even larger min gap */
             margin-bottom: 2rem;
-            flex-wrap: nowrap;
+            flex-wrap: nowrap; /* prevent wrapping */
             white-space: nowrap; /* force single line */
         }
 
         .footer-nav a {
             color: #F5F1E3;
             text-decoration: none;
-            font-size: 0.80rem;
+            font-size: clamp(1.1rem, 1vw, 1rem); /* larger min, original max */
             transition: color 0.3s ease;
         }
 
