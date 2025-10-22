@@ -38,6 +38,37 @@
             margin-bottom: 0rem;
         }
 
+        .hamburger {
+            display: none;
+            position: absolute;
+            top: 2.2rem;
+            right: 2rem;
+            width: 40px;
+            height: 40px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 100;
+        }
+        .hamburger span {
+            display: block;
+            width: 30px;
+            height: 4px;
+            background: #F5F1E3;
+            border-radius: 2px;
+            margin: 6px auto;
+            transition: 0.3s;
+        }
+        .hamburger.open span:nth-child(1) {
+            transform: translateY(10px) rotate(45deg);
+        }
+        .hamburger.open span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.open span:nth-child(3) {
+            transform: translateY(-10px) rotate(-45deg);
+        }
+
         .logo-container {
             margin-bottom: 0rem;
         }
@@ -249,6 +280,11 @@
             <img src="https://i.imgur.com/98u0lFl.png" alt="Tender Bloom Logo" class="logo">
             <h1>Tender Bloom</h1>
         </div>
+         <button class="hamburger" aria-label="Open navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <nav>
             <a href="index.html">Home</a>
             <a href="tender-bloom-about.html" class="active">About Me</a>
