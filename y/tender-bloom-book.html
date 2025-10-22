@@ -264,7 +264,10 @@
         }
 
         @media (max-width: 968px) {
-    
+            nav {
+                flex-wrap: wrap;
+                gap: 1.5rem;
+            }
             nav a {
                 font-size: 0.8rem;
             }
@@ -275,6 +278,30 @@
             .footer-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
+            }
+        }
+        @media (max-width: 768px) {
+            nav {
+                display: none !important;
+                flex-direction: column;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                background: #6A3A1B;
+                z-index: 99;
+                padding: 2.5rem 0 1rem 0;
+                gap: 2rem;
+            }
+            nav.open {
+                display: flex !important;
+            }
+            nav a {
+                font-size: 2rem !important;
+                padding: 1rem 0;
+            }
+            .hamburger {
+                display: block;
             }
         }
     </style>
