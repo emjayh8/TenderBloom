@@ -35,7 +35,7 @@
             font-family: 'em-handwriting', Arial, Helvetica, sans-serif;
             font-size: 3rem;
             letter-spacing: 3px;
-            margin-bottom: .5rem;
+            margin-bottom: 0rem;
         }
 
         .logo-container {
@@ -57,6 +57,7 @@
             border-bottom: 1px solid rgba(245, 241, 227, 0.3);
             max-width: 800px;
             margin: 0 auto;
+            flex-wrap: nowrap; /* prevent wrapping */
         }
 
         nav a {
@@ -238,6 +239,7 @@
             justify-content: center;
             gap: 2rem;
             margin-bottom: 2rem;
+            flex-wrap: nowrap; /* prevent wrapping */
         }
 
         .footer-nav a {
@@ -286,10 +288,11 @@
 
         @media (max-width: 968px) {
             nav {
-                flex-wrap: wrap;
-                gap: 1.5rem;
+                flex-wrap: nowrap; /* prevent wrapping on small screens too */
             }
-
+            nav a {
+                font-size: 0.85rem;
+            }
             .hero h1 {
                 font-size: 2.2rem;
             }
@@ -300,11 +303,29 @@
 
             .newsletter-section {
                 grid-template-columns: 1fr;
+                gap: 1rem; /* reduced gap for small screens */
+                padding: 0 1rem; /* slightly tighter side padding */
+            }
+
+            /* tighten spacing inside the newsletter content on small screens */
+            .newsletter-content p {
+                margin-bottom: 1rem;
+            }
+
+            .email-form {
+                margin-top: 1rem;
             }
 
             .footer-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
+            }
+
+            .footer-nav {
+                flex-wrap: nowrap;
+            }
+            .footer-nav a {
+                font-size: 0.8rem;
             }
         }
     </style>
