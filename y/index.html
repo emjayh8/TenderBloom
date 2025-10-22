@@ -52,18 +52,19 @@
           font-family: Arial, Helvetica, sans-serif;
             display: flex;
             justify-content: center;
-            gap: 3rem;
+            gap: 1.2rem; /* reduced gap */
             padding: 1rem 0;
             border-bottom: 1px solid rgba(245, 241, 227, 0.3);
             max-width: 800px;
             margin: 0 auto;
             flex-wrap: nowrap; /* prevent wrapping */
+            white-space: nowrap; /* force single line */
         }
 
         nav a {
             color: #F5F1E3;
             text-decoration: none;
-            font-size: 1rem;
+            font-size: 0.85rem; /* smaller font for all screens */
             transition: all 0.3s ease;
             position: relative;
         }
@@ -237,20 +238,17 @@
         .footer-nav {
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 1.2rem; /* reduced gap */
             margin-bottom: 2rem;
             flex-wrap: nowrap; /* prevent wrapping */
+            white-space: nowrap; /* force single line */
         }
 
         .footer-nav a {
             color: #F5F1E3;
             text-decoration: none;
-            font-size: 0.95rem;
+            font-size: 0.85rem; /* smaller font for all screens */
             transition: color 0.3s ease;
-        }
-
-        .footer-nav a:hover {
-            color: #F4D03F;
         }
 
         .footer-about h3 {
@@ -287,11 +285,8 @@
         }
 
         @media (max-width: 968px) {
-            nav {
-                flex-wrap: nowrap; /* prevent wrapping on small screens too */
-            }
             nav a {
-                font-size: 0.85rem;
+                font-size: 0.8rem;
             }
             .hero h1 {
                 font-size: 2.2rem;
