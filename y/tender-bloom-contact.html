@@ -11,6 +11,13 @@
             box-sizing: border-box;
         }
 
+        @font-face {
+        font-family: 'em-handwriting'; /* Choose a name for your font */
+        src: url("fonts/em-handwriting.woff2") format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        }
+
         body {
             font-family: 'Georgia', serif;
             background: linear-gradient(135deg, #8B6F47 0%, #A0583C 50%, #B85C4A 100%);
@@ -22,13 +29,6 @@
         header {
             padding: 2rem 0 3rem 0;
             text-align: center;
-        }
-
-            header h1 {
-            font-family: 'em-handwriting', Arial, Helvetica, sans-serif;
-            font-size: clamp(2.2rem, 5vw, 3rem); /* responsive font size */
-            letter-spacing: 3px;
-            margin-bottom: 0rem;
         }
 
         .logo-container {
@@ -209,10 +209,10 @@
         </div>
         <nav>
             <a href="index.html">Home</a>
-            <a href="tender-bloom-about.html">About Me</a>
-            <a href="tender-bloom-offerings2.html">Current Offerings</a>
-            <a href="tender-bloom-contact.html">Contact</a>
-            <a href="tender-bloom-book.html">Book</a>
+                <a href="tender-bloom-about.html">About Me</a>
+                <a href="tender-bloom-offerings.html">Current Offerings</a>
+                <a href="tender-bloom-contact.html" class="active">Contact</a>
+                <a href="tender-bloom-book.html">Book</a>
         </nav>
     </header>
 
