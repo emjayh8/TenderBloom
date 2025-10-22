@@ -11,6 +11,13 @@
             box-sizing: border-box;
         }
 
+        @font-face {
+        font-family: 'em-handwriting'; /* Choose a name for your font */
+        src: url("fonts/em-handwriting.woff2") format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        }
+
         body {
             font-family: 'Georgia', serif;
             background: linear-gradient(135deg, #8B6F47 0%, #A0583C 50%, #B85C4A 100%);
@@ -42,7 +49,7 @@
         }
 
         nav {
-            font-family: Arial, Helvetica, sans-serif;
+          font-family: Arial, Helvetica, sans-serif;
             display: flex;
             justify-content: center;
             gap: clamp(2rem, 3vw, 3rem); /* responsive gap */
@@ -66,45 +73,41 @@
             color: #F4D03F;
         }
 
-        nav a.active {
-            color: #F4D03F;
-        }
-
-        .page-content {
-            max-width: 900px;
-            margin: 4rem auto;
-            padding: 0 2rem;
-        }
-
-        .page-title {
-            font-size: 3rem;
-            font-weight: normal;
+        .hero {
             text-align: center;
-            margin-bottom: 3rem;
+            padding: 4rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        .divider {
-            width: 350px;
-            height: 1px;
-            background-color: rgba(245, 241, 227, 0.3);
-            margin: 3rem auto;
-        }
-
-        .content-section {
-            margin-bottom: 3rem;
-        }
-
-        .content-section h2 {
-            font-size: 2rem;
+        .hero h1 {
+            font-size: 3.3rem;
             font-weight: normal;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
         }
 
-        .content-section p {
+        .hero p {
+            font-size: 1.7rem;
+            font-weight: normal;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        .hero .subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 2.5rem;
+            font-style: italic;
+        }
+
+        .hero-questions {
             font-size: 1.1rem;
+            margin-bottom: 2.5rem;
             line-height: 1.8;
-            margin-bottom: 1.5rem;
-            opacity: 0.95;
+        }
+
+        .hero-questions p {
+            margin-bottom: 1rem;
         }
 
         .btn {
@@ -126,9 +129,97 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
-        .cta-section {
+        .divider {
+            width: 350px;
+            height: 1px;
+            background-color: rgba(245, 241, 227, 0.3);
+            margin: 3rem auto;
+        }
+
+        .what-is-section {
             text-align: center;
-            margin: 4rem 0;
+            padding: 3rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .what-is-section h2 {
+            font-size: 2.5rem;
+            font-weight: normal;
+            margin-bottom: 1.5rem;
+        }
+
+        .what-is-section p {
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .newsletter-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            align-items: center;
+        }
+
+        .newsletter-content h2 {
+            font-size: 2.5rem;
+            font-weight: normal;
+            margin-bottom: .5rem;
+            line-height: 3rem;
+        }
+
+        .newsletter-content p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .email-form {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .email-form input {
+            flex: 1;
+            padding: 0.8rem 1.2rem;
+            background-color: rgba(139, 111, 71, 0.5);
+            border: 1px solid rgba(245, 241, 227, 0.3);
+            color: #F5F1E3;
+            border-radius: 25px;
+            font-family: 'Georgia', serif;
+            font-size: 0.95rem;
+        }
+
+        .email-form input::placeholder {
+            color: rgba(245, 241, 227, 0.6);
+        }
+
+        .email-form button {
+            padding: 0.8rem 2rem;
+            background-color: #1F4D3A;
+            color: #F5F1E3;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Georgia', serif;
+            font-size: 0.95rem;
+        }
+
+        .email-form button:hover {
+            background-color: #6FA5B0;
+        }
+
+        .newsletter-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }
 
         footer {
@@ -148,7 +239,7 @@
         .footer-nav {
             display: flex;
             justify-content: center;
-            gap: clamp(1.7rem, 2vw, 2rem); /* responsive gap */
+            gap: clamp(1.7rem, 2vw, 2rem); /* even larger min gap */
             margin-bottom: 2rem;
             flex-wrap: nowrap; /* prevent wrapping */
             white-space: nowrap; /* force single line */
@@ -157,7 +248,7 @@
         .footer-nav a {
             color: #F5F1E3;
             text-decoration: none;
-            font-size: clamp(1.1rem, 1vw, 1rem); /* responsive font size */
+            font-size: clamp(1.1rem, 1vw, 1rem); /* larger min, original max */
             transition: color 0.3s ease;
         }
 
@@ -195,18 +286,42 @@
         }
 
         @media (max-width: 968px) {
-            nav {
-                flex-wrap: wrap;
-                gap: 1.5rem;
+            nav a {
+                font-size: 0.8rem;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
             }
 
-            .page-title {
-                font-size: 2.2rem;
+            .hero .subtitle {
+                font-size: 1.4rem;
+            }
+
+            .newsletter-section {
+                grid-template-columns: 1fr;
+                gap: 1rem; /* reduced gap for small screens */
+                padding: 0 1rem; /* slightly tighter side padding */
+            }
+
+            /* tighten spacing inside the newsletter content on small screens */
+            .newsletter-content p {
+                margin-bottom: 1rem;
+            }
+
+            .email-form {
+                margin-top: 1rem;
             }
 
             .footer-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
+            }
+
+            .footer-nav {
+                flex-wrap: nowrap;
+            }
+            .footer-nav a {
+                font-size: 0.7rem;
             }
         }
     </style>
