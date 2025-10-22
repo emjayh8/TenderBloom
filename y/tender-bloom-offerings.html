@@ -31,11 +31,11 @@
             text-align: center;
         }
 
-         header h1 {
+        header h1 {
             font-family: 'em-handwriting', Arial, Helvetica, sans-serif;
             font-size: clamp(2.2rem, 5vw, 3rem); /* responsive font size */
             letter-spacing: 3px;
-            margin-bottom: 0rem;
+            margin-top: 0rem;
         }
 
         .logo-container {
@@ -99,6 +99,18 @@
             font-size: 1.1rem;
             margin-bottom: 3rem;
             line-height: 2;
+        }
+
+        .offerings-list a {
+            color: #F5F1E3;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            border-bottom: 1px solid rgba(245, 241, 227, 0.3);
+        }
+
+        .offerings-list a:hover {
+            color: #F4D03F;
+            border-bottom-color: #F4D03F;
         }
 
         .content-section {
@@ -302,6 +314,7 @@
     </header>
 
     <main class="page-content">
+        <div class="divider"></div>
         <h1 class="page-title">Current Offerings</h1>
         
         <div class="offerings-list">
@@ -395,7 +408,7 @@
         <div class="divider"></div>
 
         <div class="cta-section">
-            <a href="contact.html" class="btn">Get in Touch</a>
+            <a href="tender-bloom-contact.html" class="btn">Get in Touch</a>
         </div>
     </main>
 
