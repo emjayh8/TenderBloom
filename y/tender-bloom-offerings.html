@@ -356,14 +356,21 @@
             .hamburger {
                 display: block;
             }
-
+            .footer-nav {
+                display: flex;
+                justify-content: left;
+                gap: clamp(1.7rem, 1.5vw, 2rem); /* even larger min gap */
+                margin-bottom: 2rem;
+                flex-wrap: nowrap; /* prevent wrapping */
+                white-space: nowrap; /* force single line */
+            }
             .footer-nav a {
                 color: #F5F1E3;
                 text-decoration: none;
                 font-size: .8rem;
                 transition: color 0.3s ease;
             }
-            
+
     </style>
 </head>
 <body>
