@@ -281,6 +281,14 @@
             }
         }
         @media (max-width: 768px) {
+            .footer-nav {
+                display: flex;
+                justify-content: left;
+                gap: clamp(1.7rem, 1.5vw, 2rem); /* even larger min gap */
+                margin-bottom: 2rem;
+                flex-wrap: nowrap; /* prevent wrapping */
+                white-space: nowrap; /* force single line */
+            }
             .footer-nav a {
                 color: #F5F1E3;
                 text-decoration: none;
@@ -303,7 +311,7 @@
                 display: flex !important;
             }
             nav a {
-                font-size: 2rem !important;
+                font-size: 3rem !important;
                 padding: 1rem 0;
             }
             .hamburger {
