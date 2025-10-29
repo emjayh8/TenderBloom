@@ -19,7 +19,7 @@
         }
 
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'Kumbh Sans', Arial, Helvetica, sans-serif;
             background: linear-gradient(135deg, #8B6F47 0%, #A0583C 50%, #B85C4A 100%);
             color: #F5F1E3;
             line-height: 1.6;
@@ -31,11 +31,11 @@
             text-align: center;
         }
 
-        header h1 {
+      header h1 {
             font-family: 'em-handwriting', Arial, Helvetica, sans-serif;
-            font-size: clamp(2.2rem, 5vw, 3rem); /* responsive font size */
+            font-size: 4rem;
             letter-spacing: 3px;
-            margin-top: 0rem;
+            margin-bottom: 0rem;
         }
 
         .hamburger {
@@ -79,8 +79,8 @@
             filter: brightness(1.1);
         }
 
-        nav {
-          font-family: Arial, Helvetica, sans-serif;
+       nav {
+            font-family: 'em-handwriting', Helvetica, sans-serif;
             display: flex;
             justify-content: center;
             gap: clamp(2rem, 3vw, 3rem); /* responsive gap */
@@ -94,7 +94,7 @@
         nav a {
             color: #F5F1E3;
             text-decoration: none;
-            font-size: clamp(1.1rem, 1.2vw, 1.0rem); /* responsive font size */
+            font-size: 2rem;
             transition: all 0.3s ease;
             position: relative;
         }
@@ -109,13 +109,14 @@
 
         .page-content {
             max-width: 900px;
-            margin: 4rem auto;
-            padding: 0 2rem 4rem 2rem;
+            margin: 3rem auto;
+            padding: 0 2rem;
         }
 
         .page-title {
             font-size: 3rem;
-            font-weight: normal;
+            font-weight: 600;
+            letter-spacing: 1px;
             text-align: center;
             margin-bottom: 2rem;
         }
@@ -128,8 +129,8 @@
         }
 
         .offerings-list {
-            text-align: center;
-            font-size: 1.1rem;
+            text-align: left;
+            font-size: 1.4rem;
             margin-bottom: 3rem;
             line-height: 2;
         }
@@ -138,7 +139,7 @@
             color: #F5F1E3;
             text-decoration: none;
             transition: color 0.3s ease;
-            border-bottom: 1px solid rgba(245, 241, 227, 0.3);
+            border-bottom: 2.5px solid rgba(245, 241, 227, 0.3);
         }
 
         .offerings-list a:hover {
@@ -152,7 +153,7 @@
 
         .content-section h2 {
             font-size: 2rem;
-            font-weight: normal;
+            font-weight: 600;
             margin-bottom: 1.5rem;
             color: #F4D03F;
         }
@@ -247,10 +248,11 @@
 
         .cta-section {
             text-align: center;
-            margin: 4rem 0;
+            margin-bottom: 0rem;
         }
 
-       footer {
+      footer {
+            font-family: 'Kumbh Sans', Arial, Helvetica, sans-serif;
             margin-top: 4rem;
             padding: 3rem 2rem 2rem 2rem;
             border-top: 1px solid rgba(245, 241, 227, 0.2);
@@ -266,7 +268,7 @@
 
         .footer-nav {
             display: flex;
-            justify-content: center;
+            justify-content: left;
             gap: clamp(1.7rem, 2vw, 2rem); /* even larger min gap */
             margin-bottom: 2rem;
             flex-wrap: nowrap; /* prevent wrapping */
@@ -305,6 +307,7 @@
             opacity: 0.85;
             margin-bottom: 0.8rem;
         }
+
         .copyright {
             text-align: left;
             margin-top: 2rem;
@@ -353,6 +356,20 @@
             .hamburger {
                 display: block;
             }
+            .footer-nav {
+            display: flex;
+            justify-content: left;
+            gap: clamp(1.7rem, 2vw, 2rem); /* even larger min gap */
+            margin-bottom: 2rem;
+            flex-wrap: nowrap; /* prevent wrapping */
+            white-space: nowrap; /* force single line */
+        }
+
+        .footer-nav a {
+            color: #F5F1E3;
+            text-decoration: none;
+            font-size: .9rem; /* larger min, original max */
+            transition: color 0.3s ease;
         }
     </style>
 </head>
@@ -381,7 +398,7 @@
         <h1 class="page-title">Current Offerings</h1>
         
         <div class="offerings-list">
-            <a href="#peer-support">One-on-one peer support care work sessions (like therapy but not Therapy)</a><br>
+            <a href="#peer-support">One-on-one peer support care work sessions</a><br>
             <a href="#childcare">Childcare</a><br>
             <a href="#organizational">Organizational support and facilitation, Body doubling, and Accountabili-buddying</a>
         </div>
@@ -399,7 +416,7 @@
             <p>Peer support care work might be a good fit for you if you are interested in mental health support outside of the box of more traditional therapeutic models or mental health services. This work is also helpful for individuals without insurance, for whom the cost of therapy might be a barrier. Peer support care work can also be an appropriate supplement to a mental health care network that does involve traditional therapy, but could benefit from being supplemented by a peer's perspective. Ultimately, if you feel a call to share what's going on in your life and receive support in turn, then this work is appropriate for you.</p>
 
             <h3>How is this different from traditional therapy or counseling?</h3>
-            <p><em>Credit to <a href="#" target="_blank">Jack Giles</a> for some of the sentiments and language below, including the development of check-in sessions.</em></p>
+            <p><em>Credit to <a href="https://www.jackgiles.com/" target="_blank">Jack Giles</a> for some of the sentiments and language below, including the development of check-in sessions.</em></p>
             <p>Traditional therapy discourages self-disclosure from the practitioner to the client. In peer support care work, I will share relevant personal experiences if I think they may support our session.</p>
             <p>Traditional therapy also often involves an inherent power dynamic, with the therapist viewed as the expert and the client as the learner or receiver of information. In peer support care work, I will always view you as the expert of your own experience and me as the expert of mine. Ideally our sharing of experiences will support you, but neither party will hold or can exert power over the other.</p>
             <p>Traditional therapy interacts with capitalist and carceral systems, often under mandate to report to or call the police if a person is viewed as at risk of harm to themself or others. I will never call the cops on you. Instead, we will discuss an emergency plan and contacts that best suit you if an emergency need arises.</p>
@@ -407,9 +424,8 @@
 
             <h3>So how does it work?</h3>
             <p>Peer support care work with me is available in 50-60 minute phone, video, or in-person sessions. Our initial session will be guided by an intake form and subsequent sessions can be structured or free-flowing. We will work together to determine what format for sessions best suits your needs and can change our structure at any time.</p>
-            <p>Care work sessions are offered at a sliding scale ranging from $25-$100, with the goal of an average of $50 per session. A sliding scale self-assessment guideline has been provided below, used with permission from Jack Giles. If monetary payment is not accessible for you, I am happy to discuss trades for produce, groceries, meals, body work, and art such as tattoos or hair styling.</p>
             <p>If you are interested in working together, please fill out the <a href="contact.html">contact form</a> to get started. Once you have contacted me I will respond via your preferred contact method with an intake form and a link to schedule a free phone consultation. The phone consultation will last 30-60 minutes and we will use the time to discuss the type of support you hope to receive in working with me. We will also discuss rates, scheduling, and any questions you might have for me. Once this process is complete and if you still desire, we will schedule your first session. If information about my services does not feel like a good fit, I will do my best to refer you to an alternative provider.</p>
-            <p>Once booked, the following cancellation policy will apply.</p>
+            <p>Care work sessions are offered at a sliding scale ranging from $25-$100, with the goal of an average of $50 per session. A sliding scale self-assessment guideline has been provided below, used with permission from Jack Giles. If monetary payment is not accessible for you, I am happy to discuss trades for produce, groceries, meals, body work, and art such as tattoos or hair styling.</p>
 
             <div class="sliding-scale-box">
                 <h3>Sliding Scale Self-Assessment</h3>
@@ -448,7 +464,7 @@
         </div>
 
        <div class="content-section" id="organizational">
-            <h2>Organizational support, body doubling, and accountabilibuddying</h2>
+            <h2>Organizational support, body doubling, and accountabili-buddying</h2>
             <p>I am gifted with free flowing and easily accessible organization skills and love making order out of chaos. Organizational support can involve tackling a pile of dishes, a cluttered desk, a pantry, a room, or just a corner that has been overwhelming you.</p>
             <p>An organizational support session will involve me asking questions about how the space is working for you currently, what your goals for the space are moving forward, and working with you to sort through and organize your belongings to meet that goal.</p>
             <p>I can provide calm, focused, judgement free support as we organize together, I can body double to keep you on track while you handle a task that has been daunting, or I can come in and handle organization under your direction if the physical task of moving and sorting is too much. I am also happy to provide accountability services remotely, checking in periodically to support your progress towards a lifestyle shift or new goal. I am highly experienced in working with individuals with ADHD and fully support the necessity of "doom piles."</p>
@@ -457,7 +473,7 @@
         </div>
 
         <div class="policy-box">
-            <h3>Cancellation Policy</h3><br>
+            <h3 style="color: #F4D03F;">Cancellation Policy</h3><br>
 
             <h3>Late / No Show Policy</h3>
             <p>I hold each session for 15 minutes. If you have not otherwise communicated with me, the session will be considered a no-show after 15 minutes. If you are a regular client, I will send a venmo request for the cancellation fee. If you are a drop-in, I will message you directly. The standard fee is equal to the cost of your session, but a lower fee or no fee can be negotiated if necessary.</p><br>
@@ -466,9 +482,9 @@
             <p>I require 24 hours notice for cancellations or rescheduling. If you need to cancel or reschedule within the 24 hour window before your session, I will ask for a cancellation fee. If you are rescheduling and are able to do so within the same business week, the fee is waived.</p>
         </div>
 
-        <div class="divider"></div>
-
         <div class="cta-section">
+            <img src="images/smallline.png" alt="line" style="max-width: 80vw; max-height: 15px; align-items: center; margin-bottom: 3rem; margin-top: 2rem;">
+            <br>
             <a href="tender-bloom-contact.html" class="btn">Get in Touch</a>
         </div>
     </main>
