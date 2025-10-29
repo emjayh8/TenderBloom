@@ -19,7 +19,7 @@
         }
 
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'Kumbh Sans', Arial, Helvetica, sans-serif;
             background: linear-gradient(135deg, #8B6F47 0%, #A0583C 50%, #B85C4A 100%);
             color: #F5F1E3;
             line-height: 1.6;
@@ -31,9 +31,9 @@
             text-align: center;
         }
 
-         header h1 {
+           header h1 {
             font-family: 'em-handwriting', Arial, Helvetica, sans-serif;
-            font-size: clamp(2.2rem, 5vw, 3rem); /* responsive font size */
+            font-size: 4rem;
             letter-spacing: 3px;
             margin-bottom: 0rem;
         }
@@ -79,8 +79,8 @@
             filter: brightness(1.1);
         }
 
-      nav {
-          font-family: Arial, Helvetica, sans-serif;
+     nav {
+            font-family: 'em-handwriting', Helvetica, sans-serif;
             display: flex;
             justify-content: center;
             gap: clamp(2rem, 3vw, 3rem); /* responsive gap */
@@ -94,7 +94,7 @@
         nav a {
             color: #F5F1E3;
             text-decoration: none;
-            font-size: clamp(1.1rem, 1.2vw, 1.0rem); /* responsive font size */
+            font-size: 2rem;
             transition: all 0.3s ease;
             position: relative;
         }
@@ -133,8 +133,8 @@
 
         .content-section h2 {
             font-size: 2rem;
-            font-weight: normal;
-            margin-bottom: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0;
         }
 
         .content-section p {
@@ -168,7 +168,8 @@
             margin: 4rem 0;
         }
 
-        footer {
+         footer {
+            font-family: 'Kumbh Sans', Arial, Helvetica, sans-serif;
             margin-top: 4rem;
             padding: 3rem 2rem 2rem 2rem;
             border-top: 1px solid rgba(245, 241, 227, 0.2);
@@ -184,19 +185,18 @@
 
         .footer-nav {
             display: flex;
-            gap: 2rem;
+            justify-content: left;
+            gap: clamp(1.7rem, 2vw, 2rem); /* even larger min gap */
             margin-bottom: 2rem;
+            flex-wrap: nowrap; /* prevent wrapping */
+            white-space: nowrap; /* force single line */
         }
 
         .footer-nav a {
             color: #F5F1E3;
             text-decoration: none;
-            font-size: 0.95rem;
+            font-size: clamp(1.1rem, 1vw, 1rem); /* larger min, original max */
             transition: color 0.3s ease;
-        }
-
-        .footer-nav a:hover {
-            color: #F4D03F;
         }
 
         .footer-about h3 {
@@ -231,14 +231,14 @@
             font-size: 0.85rem;
             opacity: 0.7;
         }
-
+        
         @media (max-width: 968px) {
         nav {
                 flex-wrap: wrap;
                 gap: 1.5rem;
             }
             nav a {
-                font-size: 0.8rem;
+                font-size: 2rem;
             }
 
             .page-title {
@@ -302,6 +302,8 @@
         
         <div class="content-section">
             <h2>Who I am</h2>
+            <img src="images/smallline.png" alt="line" style="max-width: 80vw; max-height: 7px; align-items: center; margin-bottom: 1rem;">
+            <br>
             <p>Hi, I'm Clara. I'm a 32-year-old White queer woman with an MSW and a passion for community care and connection. A Southern transplant, I grew up on the Maryland side of the D.C. area, lived five years in Richmond, VA, and have called Atlanta home since 2017. I hold a deep love for the South in all its complicated beauty, and I'm grateful to be rooted here.</p>
             <p>Years ago a friend asked me what I would do if I didn't have to work for money and the answer that came so readily is that I would be a 'tender.' I find my greatest fulfillment when I'm tending–whether that means caring for people, plants, animals, or places. To me, tending is about truly seeing others, listening to their needs, dreams, and desires, and walking alongside them as those wishes take shape.</p>
             <p>My work is grounded in principles of anarchy, anti-racism, liberation, abolition, anti-hierarchical care, harm reduction, autonomy, and community as resistance—all while recognizing the contradictions those commitments can hold. Alongside these principles, I strive to honor the complexities of care while recognizing historic harms that come with being a White person living in the South, on stolen Indigenous land.</p>
@@ -310,15 +312,16 @@
 
         <div class="content-section">
             <h2>What I've learned</h2>
+            <img src="images/smallline.png" alt="line" style="max-width: 80vw; max-height: 13px; align-items: center; margin-bottom: 1rem;">
+            <br>
             <p>My path to care work has been shaped both formally and informally.</p>
             <p><strong>Informally:</strong> I grew up caring for children in my community and organizing spaces for friends and family as a teenager. Over the years, I've been surrounded by a rich network of queer and neurodivergent folks and walking alongside them as they explored and claimed their identities taught me the power of trust, presence, and love. These experiences deepened my commitment to inclusion and acceptance, and to supporting both traditional and nontraditional paths to care—whether that's self-diagnosis, therapy, medication, peer support, or spiritual practice.</p>
             <p><strong>Formally:</strong> I minored in psychology during my undergraduate years (2012–2015) and returned to school in 2022 to pursue my MSW, which I completed in May 2025. While I'm particularly drawn to developmental psychology, I chose social work because it felt more expansive and aligned with my sociopolitical worldview. During my graduate studies, I gained experience with DFCS and a local Atlanta nonprofit, but I often felt constrained by bureaucratic systems and professional hierarchies. Although I may pursue clinical licensure in the future, for now I've chosen to create Tender Bloom as an alternative to a traditional mental health career—a space for peer-based, community-rooted care that resists the failing infrastructure of insurance-driven therapy.</p>
             <p><strong>In Between:</strong> I've been in and out of therapy since I was a pre-teen, and in consistent therapeutic care since 2021. I have lived experience with DBT and IFS therapy and these modalities may inform my work, though I am not a trained practitioner in either. I live with C-PTSD and clinical depression, which I believe are part of the broader web of my own neurodivergence—particularly as C-PTSD overlaps with traits often associated with autism and borderline personality disorder. These diagnoses inform the way I show up with empathy, patience, and understanding in my work. In addition to clinical experiences, I also hold space for spiritual and intuitive practices like tarot and astrology. While not central to my work, I am happy to welcome these bodies of wisdom into our practice together if they feel appropriate.</p>
         </div>
-
-        <div class="divider"></div>
-
         <div class="cta-section">
+            <img src="images/smallline.png" alt="line" style="max-width: 80vw; max-height: 15px; align-items: center; margin-bottom: 3rem;">
+            <br>
             <a href="tender-bloom-offerings.html" class="btn">View Current Offerings</a>
         </div>
     </main>
