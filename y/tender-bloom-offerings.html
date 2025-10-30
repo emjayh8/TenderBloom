@@ -23,10 +23,18 @@
 
         body {
             font-family: 'Kumbh Sans', Arial, Helvetica, sans-serif;
-            background: linear-gradient(135deg, #8B6F47 0%, #A0583C 50%, #B85C4A 100%);
+            background: linear-gradient(135deg, #624F32 0%, #814831 50%, #A4291E 100%);
             color: #F5F1E3;
             line-height: 1.6;
             min-height: 100vh;
+        }
+
+        .borderexample {
+            border-width:3px;
+            border-style:solid;
+            border-color:#8B6F47;
+            background-color: #8B6F47;
+            padding: .3em;
         }
 
         header {
@@ -39,6 +47,7 @@
             font-size: 4rem;
             letter-spacing: 3px;
             margin-bottom: 0rem;
+            margin-top: -20px;
         }
 
         .hamburger {
@@ -77,7 +86,7 @@
         }
 
         .logo {
-            width: 80px;
+            width: 110px;
             height: auto;
             filter: brightness(1.1);
         }
@@ -111,7 +120,7 @@
         }
 
         .page-content {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 3rem auto;
             padding: 0 2rem;
         }
@@ -134,20 +143,41 @@
         .offerings-list {
             text-align: left;
             font-size: 1.4rem;
-            margin-bottom: 3rem;
             line-height: 2;
+            width: 100%;
         }
+
+        ul {
+            display: flex; /* Make the container a flex container */
+            justify-content: center; /* Horizontally center the content */
+            align-items: center;
+            list-style-type: none;
+            background-color: #1F4D3A;
+            margin-bottom: 2rem;
+            width: 100%;
+            padding: 0;
+        }
+
+        li a {
+            display: flex;
+            padding: 12px 16px;
+            text-decoration: none;
+}
 
         .offerings-list a {
             color: #F5F1E3;
+            display: block;
+            width: 100%;
             text-decoration: none;
             transition: color 0.3s ease;
-            border-bottom: 2.5px solid rgba(245, 241, 227, 0.3);
+            border-bottom: 2.5px solid #F5F1E3;
+            position: relative;
+            box-sizing: border-box;
         }
 
         .offerings-list a:hover {
-            color: #F4D03F;
-            border-bottom-color: #F4D03F;
+            color: #1F4D3A;
+            background-color: #F5F1E3;
         }
 
         .content-section {
@@ -167,6 +197,10 @@
             margin-top: 2rem;
             margin-bottom: 1rem;
             font-style: italic;
+            text-decoration: underline;
+            text-decoration-color: #F4D03F;
+            text-underline-offset: 4px;
+            text-decoration-thickness: 3px;
         }
 
         .content-section p {
@@ -237,7 +271,7 @@
             color: #F5F1E3;
             text-decoration: none;
             border-radius: 30px;
-            font-size: 1rem;
+            font-size: 1.2rem;
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
@@ -375,13 +409,13 @@
                 font-size: .8rem;
                 transition: color 0.3s ease;
             }
-
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="logo-container">
-            <img src="https://i.imgur.com/98u0lFl.png" alt="Tender Bloom Logo" class="logo">
+            <img src="images/tenderbloom_2hands_color.png" alt="Tender Bloom Logo" class="logo">
             <h1>Tender Bloom</h1>
         </div>
          <button class="hamburger" aria-label="Open navigation">
@@ -402,15 +436,17 @@
     <main class="page-content">
         <h1 class="page-title">Current Offerings</h1>
         
+        <ul>
         <div class="offerings-list">
-            <a href="#peer-support">One-on-one peer support care work sessions</a><br>
-            <a href="#childcare">Childcare</a><br>
-            <a href="#organizational">Organizational support and facilitation, Body doubling, and Accountabili-buddying</a>
+            <li><a href="#peer-support">One-on-one peer support care work sessions</a></li>
+            <li><a href="#childcare">Childcare</a></li>
+            <li><a href="#organizational">Organizational support and facilitation, Body doubling, and Accountabili-buddying</a></li>
         </div>
+        </ul>
 
         <div class="content-section" id="peer-support">
             <h2>One on One Peer Support Care Work Sessions</h2>
-            
+
             <h3>What is peer support care work?</h3>
             <p>Peer support care work falls somewhere between the worlds of informal talking things out with trusted loved ones (friends and family) and formal clinical psychology (aka therapy or counseling).</p>
             <p>I consider peer support care work to be the next generation of mental health care, as it removes the hierarchical nature of a counselor/client relationship and strives to regard both facilitator and recipient as equals. At its core, I hope that my care work practice provides you with a space to verbally process whatever it is that comes up for you. I intend to offer compassion, care, and gentle reflection while we hold space together for you to process.</p>
