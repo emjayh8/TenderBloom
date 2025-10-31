@@ -187,8 +187,8 @@
             z-index: 99; /* Make sure it does not overlap */
             border: none; /* Remove borders */
             outline: none; /* Remove outline */
-            background-color: #1F4D3A; /* Set a background color */
-            color: white; /* Text color */
+            background-color: #ffffff; /* Set a background color */
+            color: #1F4D3A; /* Text color */
             cursor: pointer; /* Add a mouse pointer on hover */
             padding: 15px; /* Some padding */
             border-radius: 10px; /* Rounded corners */
@@ -203,6 +203,62 @@
             height: 1px;
             background-color: rgba(245, 241, 227, 0.3);
             margin: 3rem auto;
+        }
+        .testimonial-section {
+            font-family: 'Kumbh Sans', Arial, Helvetica, sans-serif;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            align-items: start;
+            height: fit-content;
+            overflow: clip;
+        }
+
+        .testimonial-section h2 {
+            font-family: 'Kumbh Sans', Arial, Helvetica, sans-serif;
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+         .testimonial-section h3 {
+            font-family: 'Kumbh Sans', Arial, Helvetica, sans-serif;
+            font-size: 1.4rem;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+            height: auto;
+        }
+
+        .testimonial-section p {
+            font-family: 'Kumbh Sans', Arial, Helvetica, sans-serif;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.4;
+            text-overflow: clip;
+            height: auto;
+        }
+
+        #testimonials {
+            text-align: center;
+            font-family: 'Kumbh Sans', Arial, Helvetica, sans-serif;
+            font-size: 3rem;
+            font-weight: 600;
+            margin-top: 4rem;
+        }
+
+         ul {
+            display: flex; /* Make the container a flex container */
+            align-items: left;
+            list-style-type: none;
+            margin-bottom: 0 auto;
+            width: 100%;
+            text-decoration: none;
+            border-radius: 20px;
+            background-color: #1F4D3A;
+            padding: 16px 20px;
+            height: auto;
         }
 
         .what-is-section {
@@ -377,10 +433,18 @@
                 font-size: 2.5rem;
             }
 
+            .testimonial-section {
+                grid-template-columns: 1fr;
+                gap: 3rem; /* reduced gap for small screens */
+                padding: 0 1rem; /* slightly tighter side padding */
+                height: auto;
+            }
+
             .newsletter-section {
                 grid-template-columns: 1fr;
                 gap: 3rem; /* reduced gap for small screens */
                 padding: 0 1rem; /* slightly tighter side padding */
+                place-items: center;
             }
 
             /* tighten spacing inside the newsletter content on small screens */
@@ -491,10 +555,17 @@
         <a href="tender-bloom-offerings.html#peer-support" class="btn">Learn More</a><br>
         <img src="images/smallline.png" alt="line" style="max-width: 80vw; max-height: 10px; align-items: center;  margin-top: 4rem;">
     </section>
-
+        <h2 id="testimonials">Testimonials</h2>
+    <section class="testimonial-section">
+        <ul><p>“<em style="font-size: 1.7rem;">Clara has been so helpful to have for organizational support when my brain feels too overwhelmed...</em><br><br> to figure out where to start. Her gentle guidance brings me back to the things I want to get done, even when I get distracted, which is truly a gift! I appreciate that she doesn’t judge the state of things and offers a calming presence during overstimulation.”<br><br>- L.M.<br></p></ul>
+        <ul><p>"<em style="font-size: 1.7rem;">Clara Kelly has changed my life and my family's life.</em><br><br> I am a neurodivergent single mother of a neurodivergent tween. Clara's presence, skill, intelligence and creativity is a healing and galvanizing force.  She has brought deep healing to many areas in my life that once felt impossible. Her kindness and adventure and energy and emotional intelligence with my child has invited new worlds of fun, trust, great food and ease into our lives. Clara brings ease to difficult situations and her grace and depth of understanding is a rare gift. She has helped me with organization and she actually makes it fun (what?!). She is teaching my child to bake and cook, care for themself and others. Clara is inclusive, deeply accepting, creative, is a great communicator and has excellent boundaries. Clara creates a sense of home wherever she goes. I trust her, I adore her and again, I feel she has transformed our lives for the better in so many ways. I HIGHLY RECOMMEND CLARA!" <br><br>- L.S. </p></ul>
+    </section>
+    <section class="what-is-section">
+    <img src="images/smallline.png" alt="line" style="max-width: 80vw; max-height: 10px; justify-content: center; align-items: center;  margin-top: 4rem;">
+    </section>
     <section class="newsletter-section">
         <div class="newsletter-image">
-            <img src="images/beach_circles_hand.png" style="box-shadow: none;" alt="photo of a tidepool at the beach inside drawn concentric circles">
+            <img src="images/beach_circles_hand.png" style="box-shadow: none; max-width: 500px;" alt="photo of a tidepool at the beach inside drawn concentric circles">
         </div>
         <div class="newsletter-content">
             <h2>Subscribe to the <br>Tender Bloom newsletter</h2>
