@@ -187,7 +187,7 @@
             z-index: 99; /* Make sure it does not overlap */
             border: none; /* Remove borders */
             outline: none; /* Remove outline */
-            background-color: #ffffff; /* Set a background color */
+            background-color: #ffffff !important; /* Set a background color */
             color: #1F4D3A; /* Text color */
             cursor: pointer; /* Add a mouse pointer on hover */
             padding: 15px; /* Some padding */
@@ -197,6 +197,10 @@
 
         #myBtn:hover {
             background-color: #6FA5B0; /* Add a dark-grey background on hover */
+        }
+
+        #myBtn::after {
+            background-color: #FFFFFF;
         }
         .divider {
             width: 350px;
