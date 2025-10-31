@@ -16,6 +16,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            text-decoration: none;
         }
 
         @font-face {
@@ -149,7 +150,7 @@
             font-size: 1.4rem;
             line-height: 2;
             width: 100%;
-            background-color: #1F4D3A;
+            text-decoration: none;
         }
 
         .cancel-list {
@@ -157,54 +158,66 @@
             font-size: 1.2rem;
             line-height: 2;
             width: 100%;
-            background-color: #A4291E;
-        }
-
-        .cancel-list a {
-            color: #F5F1E3;
-            display: block;
-            width: 100%;
             text-decoration: none;
-            transition: color 0.3s ease;
-            position: relative;
-            box-sizing: border-box;
-        }
-
-        .cancel-list a:hover {
-            color: #A4291E;
-            background-color: #F5F1E3;
         }
 
         ul {
             display: flex; /* Make the container a flex container */
-            justify-content: center; /* Horizontally center the content */
-            align-items: center;
+            align-items: left;
             list-style-type: none;
             margin-bottom: 2rem;
             width: 100%;
             padding: 0;
-        }
-
-        li a {
-            display: flex;
-            padding: 12px 16px;
             text-decoration: none;
-}
+        }
+           
 
-        .offerings-list a {
+        #offer-btn {
+            padding: 12px 16px;
             color: #F5F1E3;
             display: block;
             width: 100%;
-            text-decoration: none;
             transition: color 0.3s ease;
-            border-bottom: 2.5px solid #F5F1E3;
-            position: relative;
-            box-sizing: border-box;
+            border-radius: 20px;
+            border-style: none;
+            background-color: #1F4D3A;
+            text-align: left;
+            text-decoration: none;
+            font-size: 1.2rem;
+            line-height: 2;
+            margin-bottom: 5px;
         }
 
-        .offerings-list a:hover {
+        #offer-btn a{
+            text-decoration: none;
+        }
+
+        #offer-btn:hover {
             color: #1F4D3A;
             background-color: #F5F1E3;
+            text-decoration: none;
+        }
+
+        #cancel-btn {
+            padding: 12px 16px;
+            color: #F5F1E3;
+            display: block;
+            width: 100%;
+            transition: color 0.3s ease;
+            border-radius: 20px;
+            border-style: none;
+            background-color: #8F4300;
+            text-align: left;
+            text-decoration: none;
+            font-size: 1.2rem;
+            line-height: 2;
+            margin-bottom: 5px;
+        }
+
+        #cancel-btn:hover {
+            color: #8F4300;
+            background-color: #F5F1E3;
+            text-decoration: none;
         }
 
         .content-section {
@@ -485,14 +498,14 @@
         
         <ul class="offerings-ul">
         <div class="offerings-list">
-            <li><a href="#peer-support">One-on-one peer support care work sessions</a></li>
-            <li><a href="#childcare">Childcare</a></li>
-            <li><a href="#organizational">Organizational support and facilitation, Body doubling, and Accountabili-buddying</a></li>
+            <a href="#peer-support"><button id="offer-btn">One-on-one peer support care work sessions</button></a>
+            <a href="#childcare"><button id="offer-btn">Childcare</button></a>
+            <a href="#organizational"><button id="offer-btn">Organizational support and facilitation, Body doubling, and Accountabili-buddying</button></a>
         </div>
         </ul>
         <ul>
         <div class="cancel-list">
-            <li><a href="#cancellation-policy">*Cancellation policy</a></li>
+            <a href="#cancellation-policy"><button id="cancel-btn">*Cancellation policy</button></a>
         </div>
         </ul>
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
