@@ -149,6 +149,30 @@
             font-size: 1.4rem;
             line-height: 2;
             width: 100%;
+            background-color: #1F4D3A;
+        }
+
+        .cancel-list {
+            text-align: left;
+            font-size: 1.2rem;
+            line-height: 2;
+            width: 100%;
+            background-color: #A4291E;
+        }
+
+        .cancel-list a {
+            color: #F5F1E3;
+            display: block;
+            width: 100%;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .cancel-list a:hover {
+            color: #A4291E;
+            background-color: #F5F1E3;
         }
 
         ul {
@@ -156,7 +180,6 @@
             justify-content: center; /* Horizontally center the content */
             align-items: center;
             list-style-type: none;
-            background-color: #1F4D3A;
             margin-bottom: 2rem;
             width: 100%;
             padding: 0;
@@ -285,6 +308,26 @@
             background-color: #6FA5B0;
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        #myBtn {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed/sticky position */
+            bottom: 20px; /* Place the button at the bottom of the page */
+            right: 30px; /* Place the button 30px from the right */
+            z-index: 99; /* Make sure it does not overlap */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color: #1F4D3A; /* Set a background color */
+            color: white; /* Text color */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            padding: 15px; /* Some padding */
+            border-radius: 10px; /* Rounded corners */
+            font-size: 18px; /* Increase font size */
+        }
+
+        #myBtn:hover {
+            background-color: #6FA5B0; /* Add a dark-grey background on hover */
         }
 
         .cta-section {
@@ -440,20 +483,25 @@
     <main class="page-content">
         <h1 class="page-title">Current Offerings</h1>
         
-        <ul>
+        <ul class="offerings-ul">
         <div class="offerings-list">
             <li><a href="#peer-support">One-on-one peer support care work sessions</a></li>
             <li><a href="#childcare">Childcare</a></li>
             <li><a href="#organizational">Organizational support and facilitation, Body doubling, and Accountabili-buddying</a></li>
         </div>
         </ul>
-
+        <ul>
+        <div class="cancel-list">
+            <li><a href="#cancellation-policy">*Cancellation policy</a></li>
+        </div>
+        </ul>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
         <div class="content-section" id="peer-support">
             <h2>One on One Peer Support Care Work Sessions</h2>
 
             <h3>What is peer support care work?</h3>
             <p>Peer support care work falls somewhere between the worlds of informal talking things out with trusted loved ones (friends and family) and formal clinical psychology (aka therapy or counseling).</p>
-            <p>I consider peer support care work to be the next generation of mental health care, as it removes the hierarchical nature of a counselor/client relationship and strives to regard both facilitator and recipient as equals. At its core, I hope that my care work practice provides you with a space to verbally process whatever it is that comes up for you. I intend to offer compassion, care, and gentle reflection while we hold space together for you to process.</p>
+            <p>I consider peer support care work to be the next iteration of mental health care, as it minimizes the hierarchical nature of a counselor/client relationship and strives to regard both facilitator and recipient as equals. At its core, I hope that my care work practice provides you with a space to verbally process whatever it is that comes up for you. I intend to offer compassion, care, and gentle reflection while we hold space together for you to process.</p>
             <p>While we will likely cover topics of mental health in our time together, I am not a licensed therapist or professional counselor. That said, I will be able to speak from lived experience on the following topics: depression, anxiety, C-PTSD, unspecified neurodivergence, suicidality, "high-functioning" depression and anxiety, emotional abuse, sexual abuse, bullying, dance specific trauma, restrictive eating, perfectionism, people pleasing, relationship loss and divorce, ethical nonmonogamy and polyamory, kink, queerness, avoidant attachment, burnout, community building, firearm safety, breaking up with social media, and identifying and communicating wants, needs, and boundaries.</p>
             <p>I welcome your perspective on these topics and more, and will always honor you as the greatest expert in your own lived experience.</p>
 
@@ -461,7 +509,7 @@
             <p>Peer support care work might be a good fit for you if you are interested in mental health support outside of the box of more traditional therapeutic models or mental health services. This work is also helpful for individuals without insurance, for whom the cost of therapy might be a barrier. Peer support care work can also be an appropriate supplement to a mental health care network that does involve traditional therapy, but could benefit from being supplemented by a peer's perspective. Ultimately, if you feel a call to share what's going on in your life and receive support in turn, then this work is appropriate for you.</p>
 
             <h3>How is this different from traditional therapy or counseling?</h3>
-            <p><em>Credit to <a href="https://www.jackgiles.com/" target="_blank">Jack Giles</a> for some of the sentiments and language below, including the development of check-in sessions.</em></p>
+            <p><em>Credit to <a href="https://www.jack-giles.com/" target="_blank">Jack Giles</a> for some of the sentiments and language below, including the development of check-in sessions.</em></p>
             <p>Traditional therapy discourages self-disclosure from the practitioner to the client. In peer support care work, I will share relevant personal experiences if I think they may support our session.</p>
             <p>Traditional therapy also often involves an inherent power dynamic, with the therapist viewed as the expert and the client as the learner or receiver of information. In peer support care work, I will always view you as the expert of your own experience and me as the expert of mine. Ideally our sharing of experiences will support you, but neither party will hold or can exert power over the other.</p>
             <p>Traditional therapy interacts with capitalist and carceral systems, often under mandate to report to or call the police if a person is viewed as at risk of harm to themself or others. I will never call the cops on you. Instead, we will discuss an emergency plan and contacts that best suit you if an emergency need arises.</p>
@@ -469,8 +517,8 @@
 
             <h3>So how does it work?</h3>
             <p>Peer support care work with me is available in 50-60 minute phone, video, or in-person sessions. Our initial session will be guided by an intake form and subsequent sessions can be structured or free-flowing. We will work together to determine what format for sessions best suits your needs and can change our structure at any time.</p>
-            <p>If you are interested in working together, please fill out the <a href="contact.html">contact form</a> to get started. Once you have contacted me I will respond via your preferred contact method with an intake form and a link to schedule a free phone consultation. The phone consultation will last 30-60 minutes and we will use the time to discuss the type of support you hope to receive in working with me. We will also discuss rates, scheduling, and any questions you might have for me. Once this process is complete and if you still desire, we will schedule your first session. If information about my services does not feel like a good fit, I will do my best to refer you to an alternative provider.</p>
-            <p>Care work sessions are offered at a sliding scale ranging from $25-$100, with the goal of an average of $50 per session. A sliding scale self-assessment guideline has been provided below, used with permission from Jack Giles. If monetary payment is not accessible for you, I am happy to discuss trades for produce, groceries, meals, body work, and art such as tattoos or hair styling.</p>
+            <p>If you are interested in working together, please fill out the <a href="https://docs.google.com/forms/d/e/1FAIpQLSeJM3u2IBhJPETYyi0d2C2vqhc9FGmsbW02oK_9mQafypmRiw/viewform?usp=header" target="_blank">contact form</a> to get started. Once you have contacted me I will respond via your preferred contact method with an intake form and a link to schedule a free phone consultation. The phone consultation will last 30-60 minutes and we will use the time to discuss the type of support you hope to receive in working with me. We will also discuss rates, scheduling, and any questions you might have for me. Once this process is complete and if you still desire, we will schedule your first session. If information about my services does not feel like a good fit, I will do my best to refer you to an alternative provider.</p>
+            <p>Care work sessions are offered at a sliding scale ranging from $25-$100, with the goal of an average of $50 per session. A sliding scale self-assessment guideline has been provided below, used with permission from <a href="https://www.jack-giles.com/" target="_blank">Jack Giles</a> and <a href="https://www.ollyscarbeary.com/" target="_blank">Olly Scarbeary</a>. If monetary payment is not accessible for you, I am happy to discuss trades for produce, groceries, meals, body work, and art such as tattoos or hair styling.</p>
 
             <div class="sliding-scale-box">
                 <h3>Sliding Scale Self-Assessment</h3>
@@ -517,14 +565,14 @@
             <p>Once booked, the following cancellation policy will apply.</p>
         </div>
 
-        <div class="policy-box">
+        <div class="policy-box" id="cancellation-policy">
             <h3 style="color: #F4D03F;">Cancellation Policy</h3><br>
 
-            <h3>Late / No Show Policy</h3>
-            <p>I hold each session for 15 minutes. If you have not otherwise communicated with me, the session will be considered a no-show after 15 minutes. If you are a regular client, I will send a venmo request for the cancellation fee. If you are a drop-in, I will message you directly. The standard fee is equal to the cost of your session, but a lower fee or no fee can be negotiated if necessary.</p><br>
+            <h3>Late / No Show Policy - Peer Support Care Work Specific</h3>
+            <p>For peer support care work I hold each session for 15 minutes. If you have not otherwise communicated with me, the session will be considered a no-show after 15 minutes. If you are a regular client, I will send a venmo request for the cancellation fee. The standard fee is equal to the cost of your session, but a lower fee or no fee can be negotiated if necessary.</p><br>
 
-            <h3>Canceling / Rescheduling</h3>
-            <p>I require 24 hours notice for cancellations or rescheduling. If you need to cancel or reschedule within the 24 hour window before your session, I will ask for a cancellation fee. If you are rescheduling and are able to do so within the same business week, the fee is waived.</p>
+            <h3>Canceling / Rescheduling - All Services</h3>
+            <p>For all services I request 24 hours notice for cancellations or rescheduling. If you need to cancel or reschedule within the 24 hour window before your session, I will ask for a cancellation fee. The standard fee is equal to the cost of your session, but a lower fee or no fee can be negotiated if necessary. If you are rescheduling and are able to do so within the same business week, the fee is waived.</p>
         </div>
 
         <div class="cta-section">
@@ -551,7 +599,7 @@
             
             <div class="footer-disclaimer">
                 <h3>Disclaimer</h3>
-                <p>I am providing lived experience peer support care work. I am not a therapist or licensed clinician. While the work we do together may resemble therapy or have a beneficial impact, it is not the same as care provided by a licensed professional counselor.</p>
+                <p>I am providing lived experience peer support care work. I am not a therapist or licensed clinician. While the work we do together may resemble therapy or have a beneficial impact, it is not the same as care provided by a licensed professional counselor. The most accurate technical label for my work would be "life coaching" but I do not choose that label for myself or my practice.</p>
                 <p>I am not giving out medical advice, diagnosing conditions, or treating diseases and/or illnesses. You are the ultimate authority on your physical, mental, and spiritual needs.</p>
             </div>
         </div>
@@ -559,6 +607,25 @@
         <div class="copyright">© 2025</div>
     </footer>
     <script>
+        // Get the button:
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
         document.addEventListener('DOMContentLoaded', function() {
             const hamburger = document.querySelector('.hamburger');
             const nav = document.querySelector('nav');
