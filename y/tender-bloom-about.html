@@ -16,6 +16,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            align-items: center;
         }
 
         @font-face {
@@ -95,7 +96,12 @@
             color: #6FA5B0;
             text-decoration: underline;
         }
-
+        #clarabiopic{
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 700px;
+        }
      nav {
             font-family: 'em-handwriting', Helvetica, sans-serif;
             display: flex;
@@ -128,6 +134,7 @@
             max-width: 900px;
             margin: 3rem auto;
             padding: 0 2rem;
+            align-content: center;
         }
 
         .page-title {
@@ -146,6 +153,12 @@
 
         .content-section {
             margin-bottom: 3rem;
+            align-items: center;
+            text-align: center;
+        }
+
+        .title-line {
+            text-align: left !important;
         }
 
         .content-section h2 {
@@ -159,6 +172,7 @@
             line-height: 1.8;
             margin-bottom: 1.5rem;
             opacity: 0.95;
+            text-align: left !important;
         }
 
         .btn {
@@ -314,6 +328,13 @@
                 font-size: .8rem;
                 transition: color 0.3s ease;
             }
+
+            #clarabiopic{
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            }   
+
             nav {
                 display: none !important;
                 flex-direction: column;
@@ -363,9 +384,11 @@
     <main class="page-content">
         <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
         <div class="content-section">
-            <h2>Who I am</h2>
-            <img src="images/smallline.png" alt="line" style="max-width: 80vw; max-height: 7px; align-items: center; margin-bottom: 1rem;">
-            <br>
+            <img src="images/clarabio.png" id="clarabiopic" alt="red haired woman with ivory skin and tattoos showing the peace sign in front of a river">
+            <div class="title-line">
+                <h2>Who I am</h2>
+                <img src="images/smallline.png" alt="line" style="max-width: 80vw; max-height: 7px; margin-bottom: 1rem;">
+            </div>
             <p>Hi, I'm Clara. I'm a 32-year-old White queer woman with an MSW and a passion for community care and connection. A Southern transplant, I grew up on the Maryland side of the D.C. area, lived five years in Richmond, VA, and have called Atlanta home since 2017. I hold a deep love for the South in all its complicated beauty, and I'm grateful to be rooted here.</p>
             <p>Years ago a friend asked me what I would do if I didn't have to work for money and the answer that came so readily is that I would be a 'tender.' I find my greatest fulfillment when I'm tending–whether that means caring for people, plants, animals, or places. To me, tending is about truly seeing others, listening to their needs, dreams, and desires, and walking alongside them as those wishes take shape.</p>
             <p>My work is grounded in principles of anarchy, anti-racism, liberation, abolition, anti-hierarchical care, harm reduction, autonomy, and community as resistance—all while recognizing the contradictions those commitments can hold. Alongside these principles, I strive to honor the complexities of care while recognizing historic harms that come with being a White person living in the South, on stolen Indigenous land.</p>
@@ -373,9 +396,10 @@
         </div>
             <img class="mushroom-image" src="images/mushrooms.png" alt="mushrooms" style="max-width: 50vw; max-height: 500px; align-items: center; align-content: center; justify-content: center; margin-bottom: 3rem;">
         <div class="content-section">
-            <h2>What I've learned</h2>
-            <img src="images/smallline.png" alt="line" style="max-width: 80vw; max-height: 13px; align-items: center; margin-bottom: 1rem;">
-            <br>
+            <div class="title-line">
+                <h2>What I've learned</h2>
+                <img src="images/smallline.png" alt="line" style="max-width: 80vw; max-height: 13px; align-items: center; margin-bottom: 1rem;">
+            </div>
             <p>My path to care work has been shaped both formally and informally.</p>
             <p><strong><u>Informally:</u></strong> I grew up caring for children in my community and have been organizing gathering spaces for friends and family since I was a teenager. Over the years, I've been surrounded by a rich network of queer and neurodivergent folks and walking alongside them as they explored and claimed their identities has taught me the power of trust, presence, and love. These experiences deepened my commitment to inclusion and acceptance, and to supporting both traditional and nontraditional paths to care—whether that's self-diagnosis, therapy, medication, peer support, or spiritual practice.</p>
             <p><strong><u>Formally:</u></strong> I minored in psychology during my undergraduate years (2012–2015) and returned to school in 2022 to pursue my MSW, which I completed in May 2025. While I'm particularly drawn to developmental psychology, I chose social work because it felt more expansive and aligned with my sociopolitical worldview. During my graduate studies, I gained experience with DFCS and a local Atlanta nonprofit, but I often felt constrained by bureaucratic systems and professional hierarchies. Although I may pursue clinical licensure in the future, for now I've chosen to create Tender Bloom as an alternative to a traditional mental health career—a space for peer-based, community-rooted care that resists the failing infrastructure of insurance-driven therapy.</p>
