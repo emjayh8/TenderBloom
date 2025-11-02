@@ -659,6 +659,35 @@ function scrollFunction() {
   }
 }
 
+const button = document.getElementById('cancel-btn');
+
+button.addEventListener('click', () => {
+  // Perform button-related actions here
+  console.log('Button clicked!');
+
+  // Remove focus from the button
+  button.blur();
+});
+
+const button2 = document.getElementById('offer-btn');
+
+button2.addEventListener('click', () => {
+  // Perform button-related actions here
+  console.log('Button clicked!');
+
+  // Remove focus from the button
+  button2.blur();
+});
+
+const button3 = document.getElementById('myBtn');
+button3.addEventListener('click', () => {
+  // Perform button-related actions here
+  console.log('Button clicked!');
+
+  // Remove focus from the button
+  button3.blur();
+});
+
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
