@@ -519,41 +519,6 @@
         }
     </style>
 </head>
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyxwos01HdFylUm2H89TmIYbM2x20-HvwnZvpCNNxiEj8r3Qepqg_SYe61wrGh112L0/exec'; // paste the /exec URL from your Apps Script
-
-  document
-    .getElementById('email-form')
-    .addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message');
-      message.textContent = '⏳ Submitting...';
-
-      try {
-        const response = await fetch(scriptURL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email }),
-        });
-
-        const result = await response.json();
-
-        if (result.status === 'success') {
-          message.textContent = '✅ Thanks for subscribing!';
-          document.getElementById('subscribeForm').reset();
-        } else if (result.status === 'duplicate') {
-          message.textContent = '⚠️ You’re already subscribed.';
-        } else {
-          message.textContent = '❌ ' + result.message;
-        }
-      } catch (error) {
-        console.error(error);
-        message.textContent = '⚠️ Network error, please try again.';
-      }
-    });
-</script>
 <body>
     <header>
         <div class="logo-container">
@@ -646,6 +611,40 @@
         <div class="copyright">© 2025</div>
     </footer>
     <script>
+
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyxwos01HdFylUm2H89TmIYbM2x20-HvwnZvpCNNxiEj8r3Qepqg_SYe61wrGh112L0/exec'; // paste the /exec URL from your Apps Script
+
+  document
+    .getElementById('email-form')
+    .addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message');
+      message.textContent = '⏳ Submitting...';
+
+      try {
+        const response = await fetch(scriptURL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email }),
+        });
+
+        const result = await response.json();
+
+        if (result.status === 'success') {
+          message.textContent = '✅ Thanks for subscribing!';
+          document.getElementById('subscribeForm').reset();
+        } else if (result.status === 'duplicate') {
+          message.textContent = '⚠️ You’re already subscribed.';
+        } else {
+          message.textContent = '❌ ' + result.message;
+        }
+      } catch (error) {
+        console.error(error);
+        message.textContent = '⚠️ Network error, please try again.';
+      }
+    });
 
 
 document.getElementById('email-form').addEventListener('submit', function (e) {
