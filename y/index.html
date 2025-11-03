@@ -613,35 +613,20 @@
     <script>
 
 
+document.getElementById('email-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message');
 
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbyV2UN9xDOi1SbLb1-jXTUQahXBHYPewyXTY6RkhKJsKzYdPmb6LKty0JHTtH86H2u1/exec'; // paste your Apps Script Web App URL here
-
-      document
-        .getElementById('email-form')
-        .addEventListener('submit', async (e) => {
-          e.preventDefault();
-
-          const email = document.getElementById('email').value;
-          const message = document.getElementById('message');
-
-          try {
-            const response = await fetch(scriptURL, {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ email }),
-            });
-
-            const result = await response.json();
-            if (result.status === 'success') {
-              message.textContent = '✅ Thanks for subscribing!';
-              document.getElementById('email-form').reset();
-            } else {
-              message.textContent = '⚠️ Something went wrong.';
-            }
-          } catch (error) {
-            message.textContent = '❌ Network error, please try again.';
-          }
-        });
+        google.script.run
+          .withSuccessHandler(function (res) {
+            message.textContent = res.message;
+          })
+          .withFailureHandler(function (err) {
+            message.textContent = '❌ ' + err.message;
+          })
+          .doPost({ postData: { contents: JSON.stringify({ email }) } });
+      });
 
                 // Get the button:
 let mybutton = document.getElementById("myBtn");
