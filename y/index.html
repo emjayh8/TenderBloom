@@ -611,56 +611,49 @@
         <div class="copyright">© 2025</div>
     </footer>
     <script>
+        
 
   const scriptURL = 'https://script.google.com/macros/s/AKfycbyxwos01HdFylUm2H89TmIYbM2x20-HvwnZvpCNNxiEj8r3Qepqg_SYe61wrGh112L0/exec'; // paste the /exec URL from your Apps Script
 
-  document
-    .getElementById('email-form')
-    .addEventListener('submit', async (e) => {
-      e.preventDefault();
+   document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('email-form');
+    const message = document.getElementById('message');
 
+    // Safety check
+    if (!form) {
+      console.error('Form not found!');
+      return;
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
       const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message');
       message.textContent = '⏳ Submitting...';
 
       try {
         const response = await fetch(scriptURL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email }),
+          body: JSON.stringify({ email })
         });
 
         const result = await response.json();
+        console.log('Server response:', result);
 
         if (result.status === 'success') {
           message.textContent = '✅ Thanks for subscribing!';
-          document.getElementById('subscribeForm').reset();
+          form.reset();
         } else if (result.status === 'duplicate') {
           message.textContent = '⚠️ You’re already subscribed.';
         } else {
           message.textContent = '❌ ' + result.message;
         }
-      } catch (error) {
-        console.error(error);
+      } catch (err) {
+        console.error(err);
         message.textContent = '⚠️ Network error, please try again.';
       }
     });
-
-
-document.getElementById('email-form').addEventListener('submit', function (e) {
-        e.preventDefault();
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message');
-
-        google.script.run
-          .withSuccessHandler(function (res) {
-            message.textContent = res.message;
-          })
-          .withFailureHandler(function (err) {
-            message.textContent = '❌ ' + err.message;
-          })
-          .doPost({ postData: { contents: JSON.stringify({ email }) } });
-      });
+  });
 
                 // Get the button:
 let mybutton = document.getElementById("myBtn");
