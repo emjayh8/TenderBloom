@@ -582,6 +582,7 @@
                 <input type="email" placeholder="Type your email...">
                 <button type="submit">Subscribe</button>
             </form>
+            <p id="message"></p>
         </div>
     </section>
   
@@ -610,6 +611,38 @@
         <div class="copyright">© 2025</div>
     </footer>
     <script>
+
+
+
+      const scriptURL = 'tender-bloom-975e3.firebaseapp.com'; // paste your Apps Script Web App URL here
+
+      document
+        .getElementById('email-form')
+        .addEventListener('submit', async (e) => {
+          e.preventDefault();
+
+          const email = document.getElementById('email').value;
+          const message = document.getElementById('message');
+
+          try {
+            const response = await fetch(scriptURL, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email }),
+            });
+
+            const result = await response.json();
+            if (result.status === 'success') {
+              message.textContent = '✅ Thanks for subscribing!';
+              document.getElementById('email-form').reset();
+            } else {
+              message.textContent = '⚠️ Something went wrong.';
+            }
+          } catch (error) {
+            message.textContent = '❌ Network error, please try again.';
+          }
+        });
+
                 // Get the button:
 let mybutton = document.getElementById("myBtn");
 
