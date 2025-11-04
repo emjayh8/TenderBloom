@@ -611,19 +611,9 @@
         <div class="copyright">© 2025</div>
     </footer>
     <script>
-        
-
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyxwos01HdFylUm2H89TmIYbM2x20-HvwnZvpCNNxiEj8r3Qepqg_SYe61wrGh112L0/exec'; // paste the /exec URL from your Apps Script
-
-   document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('subscribeForm');
     const message = document.getElementById('message');
-
-    // Safety check
-    if (!form) {
-      console.error('Form not found!');
-      return;
-    }
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -631,7 +621,8 @@
       message.textContent = '⏳ Submitting...';
 
       try {
-        const response = await fetch(scriptURL, {
+        // Send to your Node backend (same domain)
+        const response = await fetch('/subscribe', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email })
@@ -654,7 +645,6 @@
       }
     });
   });
-
                 // Get the button:
 let mybutton = document.getElementById("myBtn");
 
