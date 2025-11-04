@@ -1,12 +1,15 @@
 # Tender Bloom Care Work
 
-Tender Bloom Care Work provides peer support care sessions by phone, video, or in-person, offering a compassionate, collaborative space for emotional processing. Sessions are flexible, guided by client needs, and offered on a sliding scale.
+This is a HTML/CSS/JS website for my good friend's personal business. I created the illustrations, custom fonts and branding.
+Tender Bloom Care Work provides peer support care sessions by phone, video, or in-person, offering a compassionate, collaborative space for emotional processing.
+I used Cursor AI to write this README for git.
 
 ## Features
 
 - Responsive, mobile-friendly design
 - Hamburger dropdown navigation on small screens
 - Peer support and care work offerings
+- Original illustrations, fonts, and branding
 - Newsletter subscription form (Google Apps Script backend)
 - Testimonials and about sections
 - Consistent navigation and footer across all pages
@@ -35,12 +38,6 @@ Tender Bloom Care Work provides peer support care sessions by phone, video, or i
 
 This site is static and can be hosted on any web server (Netlify, Vercel, GitHub Pages, etc).
 Currently hosted on Google Firebase.
-
-## Customization
-
-- Update images in the `images/` folder.
-- Edit text and links in the HTML files.
-- Adjust styles in the `<style>` blocks in each HTML file.
 
 ## License
 
