@@ -1,7 +1,7 @@
 const express = require('express');
 const fetch = require('node-fetch'); // v2
-const app = express();
 const cors = require('cors'); // ← NEW
+const app = express();
 
 app.use(express.json());
 
