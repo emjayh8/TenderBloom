@@ -41,7 +41,7 @@ Currently hosted on Google Firebase.
 
 ## License
 
-[MIT](LICENSE) or your preferred license.
+[MIT](LICENSE)
 
 ---
 
