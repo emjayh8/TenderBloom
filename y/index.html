@@ -611,7 +611,7 @@
         <div class="copyright">© 2025</div>
     </footer>
     <script>
-    document.addEventListener('DOMContentLoaded', () => {
+      document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('subscribeForm');
     const message = document.getElementById('message');
 
@@ -621,8 +621,7 @@
       message.textContent = '⏳ Submitting...';
 
       try {
-        // Send to your Node backend (same domain)
-        const response = await fetch('/subscribe', {
+        const response = await fetch('http://localhost:3000/subscribe', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email })
