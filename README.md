@@ -1,6 +1,6 @@
 # Tender Bloom Care Work
 
-This is a HTML/CSS/JS website for my good friend's personal business. I created the illustrations, custom fonts and branding.
+This is a HTML/CSS/JS website for my good friend's personal business. I also created the illustrations, custom fonts and branding.
 Tender Bloom Care Work provides peer support care sessions by phone, video, or in-person, offering a compassionate, collaborative space for emotional processing.
 I used Cursor AI to write this README for git.
 
