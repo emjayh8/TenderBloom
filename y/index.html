@@ -331,6 +331,14 @@
             color: rgba(245, 241, 227, 0.6);
         }
 
+        .message-container {
+            margin-top: 1rem;
+            height: auto;
+            border: 1px solid rgb(217, 213, 213);
+            border-radius: 10px;
+            padding: 0.8rem 1.2rem;
+        }
+
         .email-form button {
             padding: 0.8rem 2rem;
             background-color: #1F4D3A;
@@ -582,7 +590,9 @@
                 <input id="email"type="email" placeholder="Type your email...">
                 <button type="submit">Subscribe</button>
             </form>
-            <p id="message"></p>
+            <div class="message-container">
+                <p id="message"></p>
+            </div>
         </div>
     </section>
   
@@ -611,7 +621,7 @@
         <div class="copyright">© 2025</div>
     </footer>
     <script>
-     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzr5AiUB5oRfY56lEbFDepGTvBuG5a8D93sTTqCpD-o_IxzGj_NI1hVO3QqiUg0hnlG/exec';
+     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbySBCgnKE77ob2Q304mLYlshq1zyUnPItwJZPnRVGwy2emvjX22GfHR75m91qI25tDC/exec';
 
 document.querySelector('#subscribeForm').addEventListener('submit', async e => {
   e.preventDefault();
