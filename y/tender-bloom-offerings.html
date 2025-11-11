@@ -26,6 +26,10 @@
         font-style: normal;
         }
 
+        a {
+            transition: color 0.3s ease;
+        }
+
         body {
             font-family: 'Kumbh Sans', Arial, Helvetica, sans-serif;
             background: linear-gradient(135deg, #624F32 0%, #814831 50%, #A4291E 100%);
@@ -198,13 +202,20 @@
             text-decoration: none;
         }
 
-        #offer-btn::after {
+        #offer-btn:after {
             background-color: #1F4D3A;
         }
 
         #offer-btn:focus {
             outline: none;
             background-color: #1F4D3A;
+        }
+        #offer-btn:active {
+            background-color: #1F4D3A;
+        }
+
+         #cancel-btn:active {
+            background-color: #8F4300;
         }
 
         #cancel-btn {
@@ -229,7 +240,7 @@
             text-decoration: none;
         }
 
-        #cancel-btn::after{
+        #cancel-btn:after{
             background-color: #8F4300;
         }
 
@@ -290,14 +301,34 @@
             font-size: 1rem;
         }
 
+        .sliding-scale-cols {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: 0 auto;
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+        }
+        .sliding-scale-cols-1fr {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin: 0 auto;
+        }
+
+        .sliding-scale-cols-2fr {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin: 0 auto;
+        }
+
         .scale-tiers {
             margin: 1.5rem 0;
             padding-left: 1rem;
+            vertical-align: middle;
         }
 
         .scale-tiers p {
-            margin-bottom: 0.8rem;
-            font-size: 1.05rem;
+            margin-bottom: 2rem;
+            font-size: 2.05rem;
         }
 
         .note {
@@ -376,8 +407,7 @@
         }
 
       footer {
-            font-family: 'Kumbh Sans', Arial, Helvetica, sans-serif;
-            margin-top: 4rem;
+            margin-top: 3rem;
             padding: 3rem 2rem 2rem 2rem;
             border-top: 1px solid rgba(245, 241, 227, 0.2);
         }
@@ -392,19 +422,20 @@
 
         .footer-nav {
             display: flex;
-            justify-content: left;
-            gap: clamp(1.7rem, 2vw, 2rem); /* even larger min gap */
+            gap: 2rem;
             margin-bottom: 2rem;
-            flex-wrap: nowrap; /* prevent wrapping */
-            white-space: nowrap; /* force single line */
         }
 
         .footer-nav a {
             font-family: Arial, Helvetica, sans-serif;
             color: #F5F1E3;
             text-decoration: none;
-            font-size: clamp(1.1rem, 1vw, 1rem); /* larger min, original max */
-            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .footer-nav a:hover {
+            color: #F4D03F;
+            text-decoration: underline;
         }
 
         .footer-about h3 {
@@ -459,6 +490,36 @@
         }
 
         @media (max-width: 768px) {
+ 
+        .sliding-scale-cols {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        .sliding-scale-box {
+            background-color: rgba(31, 77, 58, 0.3);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border: 1px solid rgba(245, 241, 227, 0.2);
+        }
+
+        .sliding-scale-box p {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        .scale-tiers {
+            margin: 1.5rem 0;
+            padding-left: 1rem;
+            text-align: left;
+        }
+
+        .scale-tiers p {
+            margin-bottom: 1.5rem;
+            font-size: 2.05rem;
+        }
+
             nav {
                 display: none !important;
                 flex-direction: column;
@@ -548,7 +609,7 @@
             <p>Peer support care work might be a good fit for you if you are interested in mental health support outside of the box of more traditional therapeutic models or mental health services. This work is also helpful for individuals without insurance, for whom the cost of therapy might be a barrier. Peer support care work can also be an appropriate supplement to a mental health care network that does involve traditional therapy, but could benefit from being supplemented by a peer's perspective. Ultimately, if you feel a call to share what's going on in your life and receive support in turn, then this work is appropriate for you.</p>
 
             <h3>How is this different from traditional therapy or counseling?</h3>
-            <p><em>Credit to <a href="https://www.jack-giles.com/" target="_blank">Jack Giles</a> for some of the sentiments and language below, including the development of check-in sessions.</em></p>
+            <p><em>Credit to <a href="https://www.jack-giles.com/" target="_blank">Jack Giles</a> for some of the sentiments and language structure below, including the development of check-in sessions.</em></p>
             <p>Traditional therapy discourages self-disclosure from the practitioner to the client. In peer support care work, I will share relevant personal experiences if I think they may support our session.</p>
             <p>Traditional therapy also often involves an inherent power dynamic, with the therapist viewed as the expert and the client as the learner or receiver of information. In peer support care work, I will always view you as the expert of your own experience and me as the expert of mine. Ideally our sharing of experiences will support you, but neither party will hold or can exert power over the other.</p>
             <p>Traditional therapy interacts with capitalist and carceral systems, often under mandate to report to or call the police if a person is viewed as at risk of harm to themself or others. I will never call the cops on you. Instead, we will discuss an emergency plan and contacts that best suit you if an emergency need arises.</p>
@@ -557,34 +618,38 @@
             <h3>So how does it work?</h3>
             <p>Peer support care work with me is available in 50-60 minute phone, video, or in-person sessions. Our initial session will be guided by an intake form and subsequent sessions can be structured or free-flowing. We will work together to determine what format for sessions best suits your needs and can change our structure at any time.</p>
             <p>If you are interested in working together, please fill out the <a href="https://docs.google.com/forms/d/e/1FAIpQLSeJM3u2IBhJPETYyi0d2C2vqhc9FGmsbW02oK_9mQafypmRiw/viewform?usp=header" target="_blank">contact form</a> to get started. Once you have contacted me I will respond via your preferred contact method with an intake form and a link to schedule a free phone consultation. The phone consultation will last 30-60 minutes and we will use the time to discuss the type of support you hope to receive in working with me. We will also discuss rates, scheduling, and any questions you might have for me. Once this process is complete and if you still desire, we will schedule your first session. If information about my services does not feel like a good fit, I will do my best to refer you to an alternative provider.</p>
-            <p>Care work sessions are offered at a sliding scale ranging from $25-$100, with the goal of an average of $50 per session. A sliding scale self-assessment guideline has been provided below, used with permission from <a href="https://www.jack-giles.com/" target="_blank">Jack Giles</a> and <a href="https://www.ollyscarbeary.com/" target="_blank">Olly Scarbeary</a>. If monetary payment is not accessible for you, I am happy to discuss trades for produce, groceries, meals, body work, and art such as tattoos or hair styling.</p>
+            <p>Care work sessions are offered at a sliding scale ranging from $25-$100, with the goal of an average of $50 per session. A sliding scale self-assessment guideline has been provided below, adapted with permission from <a href="https://www.jack-giles.com/" target="_blank">Jack Giles</a> and <a href="https://www.ollyscarbeary.com/" target="_blank">Olly Scarbeary</a>. If monetary payment is not accessible for you, I am happy to discuss trades for produce, groceries, meals, body work, and art such as tattoos or hair styling.</p>
 
             <div class="sliding-scale-box">
-                <h3>Sliding Scale Self-Assessment</h3>
-                <p>+1 you have your own car<br>
-                +1 you went to college<br>
-                +1 you are debt free<br>
-                +2 you hold white privilege<br>
-                +1 you hold cis/hetero privilege<br>
-                +1 you have a job with benefits<br>
-                +1 you don't have any dependents<br>
-                +1 you live without roommates<br>
-                +1 both of your parents went to college<br>
-                +2 you have personal savings to fall back on<br>
-                +1 you've had steady income for the last two years<br>
-                +1 you receive financial support from your parents<br>
-                +3 you have familial wealth (trust fund/inheritance)<br>
-                -1 you are unable or unwilling to hold a full-time job<br>
-                -1 your primary mode of income offers sliding scale</p>
-
-                <div class="scale-tiers">
-                    <p><strong>0 - 4 = $25-35</strong></p>
-                    <p><strong>5 - 7 = $35-55</strong></p>
-                    <p><strong>8 - 10 = $55-75</strong></p>
-                    <p><strong>11 - 13 = $75-100</strong></p>
-                    <p><strong>14 - 17 = $100+</strong></p>
+                <div class="sliding-scale-cols">
+                    <div class="sliding-scale-cols-1fr">
+                        <h3>Sliding Scale Self-Assessment</h3>
+                        <p>+1 you have your own car<br>
+                        +1 you went to college<br>
+                        +1 you are debt free<br>
+                        +2 you hold white privilege<br>
+                        +1 you hold cis/hetero privilege<br>
+                        +1 you have a job with benefits<br>
+                        +1 you don't have any dependents<br>
+                        +1 you live without roommates<br>
+                        +1 both of your parents went to college<br>
+                        +2 you have personal savings to fall back on<br>
+                        +1 you've had steady income for the last two years<br>
+                        +1 you receive financial support from your parents<br>
+                        +3 you have familial wealth (trust fund/inheritance)<br>
+                        -1 you are unable or unwilling to hold a full-time job<br>
+                        -1 your primary mode of income offers sliding scale</p>
+                    </div>
+                    <div class="sliding-scale-cols-2fr">
+                        <div class="scale-tiers">
+                            <p><strong>0 - 4 = $25-35</strong></p>
+                            <p><strong>5 - 7 = $35-55</strong></p>
+                            <p><strong>8 - 10 = $55-75</strong></p>
+                            <p><strong>11 - 13 = $75-100</strong></p>
+                            <p><strong>14 - 17 = $100+</strong></p>
+                        </div>
+                    </div>
                 </div>
-
                 <p class="note">This self-assessment is an imperfect tool. It is a non-exhaustive list that is meant to be a guide, not a rule book. I will not be asking what score you got or checking your answers. Ideally I aim to offer my services at a range of prices that keeps care work accessible to clients while also allowing me to support myself.</p>
             </div>
         </div>

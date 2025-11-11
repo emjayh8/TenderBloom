@@ -36,6 +36,10 @@
             min-height: 100vh;
         }
 
+        a {
+            transition: color 0.3s ease;
+        }
+
         header {
             padding: 2rem 0 3rem 0;
             text-align: center;
@@ -219,9 +223,6 @@
             max-width: 1200px;
             margin: 4rem auto;
             padding: 0 2rem;
-            align-items: start;
-            height: fit-content;
-            overflow: clip;
         }
 
         .testimonial-section h2 {
@@ -362,9 +363,8 @@
             border-radius: 8px;
         }
 
-        footer {
-            font-family: 'Kumbh Sans', Arial, Helvetica, sans-serif;
-            margin-top: 4rem;
+       footer {
+            margin-top: 3rem;
             padding: 3rem 2rem 2rem 2rem;
             border-top: 1px solid rgba(245, 241, 227, 0.2);
         }
@@ -379,19 +379,20 @@
 
         .footer-nav {
             display: flex;
-            justify-content: left;
-            gap: clamp(1.7rem, 2vw, 2rem); /* even larger min gap */
+            gap: 2rem;
             margin-bottom: 2rem;
-            flex-wrap: nowrap; /* prevent wrapping */
-            white-space: nowrap; /* force single line */
         }
 
         .footer-nav a {
             font-family: Arial, Helvetica, sans-serif;
             color: #F5F1E3;
             text-decoration: none;
-            font-size: clamp(1.1rem, 1vw, 1rem); /* larger min, original max */
-            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .footer-nav a:hover {
+            color: #F4D03F;
+            text-decoration: underline;
         }
 
         .footer-about h3 {
@@ -576,6 +577,7 @@
     <section class="testimonial-section">
         <ul><p>“<em style="font-size: 1.7rem;">Clara has been so helpful to have for organizational support when my brain feels too overwhelmed...</em><br><br> to figure out where to start. Her gentle guidance brings me back to the things I want to get done, even when I get distracted, which is truly a gift! I appreciate that she doesn’t judge the state of things and offers a calming presence during overstimulation.”<br><br>- L.M.<br></p></ul>
         <ul><p>"<em style="font-size: 1.7rem;">Clara Kelly has changed my life and my family's life.</em><br><br> I am a neurodivergent single mother of a neurodivergent tween. Clara's presence, skill, intelligence and creativity is a healing and galvanizing force.  She has brought deep healing to many areas in my life that once felt impossible. Her kindness and adventure and energy and emotional intelligence with my child has invited new worlds of fun, trust, great food and ease into our lives. Clara brings ease to difficult situations and her grace and depth of understanding is a rare gift. She has helped me with organization and she actually makes it fun (what?!). She is teaching my child to bake and cook, care for themself and others. Clara is inclusive, deeply accepting, creative, is a great communicator and has excellent boundaries. Clara creates a sense of home wherever she goes. I trust her, I adore her and again, I feel she has transformed our lives for the better in so many ways. I HIGHLY RECOMMEND CLARA!" <br><br>- L.S. </p></ul>
+        <ul id="dri"><p>"When life delivers an especially harsh blow or the weight of difficult past experiences resurface and become too dark to navigate alone,<br><br><em style="font-size: 1.7rem;">Clara time and again has been a lighthouse, showing me the path forward, toward a braver, kinder, stronger version of myself.</em><br><br> Clara’s endless capacity for compassion blended with discernment and wisdom make her the ideal counselor. I’m constantly reassured and supported by her guidance, and to know Clara is to become a fuller, softer, deeper version of yourself. I cannot say enough good things about Clara’s emotional intelligence and preternatural instinct for care."<br><br>- A.G. </p></ul>
     </section>
     <section class="what-is-section">
     <img src="images/smallline.png" alt="line" style="max-width: 80vw; max-height: 10px; justify-content: center; align-items: center;  margin-top: 4rem;">
